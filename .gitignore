@@ -1,0 +1,6 @@
+/target
+/.git
+/.github
+/..gitignore.kate-swp
+.Cargo.lock
+.DS_Store

@@ -18,6 +18,7 @@ Ideal para **pequenas e médias empresas, hotspots, redes domésticas, laborató
 - Armazenamento persistente via `sled`.
 
 ## Estrutura do Projeto
+```text
 src/
 ├── main.rs                  # Ponto de entrada da aplicação
 │
@@ -59,6 +60,7 @@ src/
 │
 └── utils/
     └── mod.rs               # Funções auxiliares (formatadores, validações, etc.)
+```
 
 ## Dependências
 [dependencies]

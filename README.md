@@ -18,7 +18,47 @@ Ideal para **pequenas e médias empresas, hotspots, redes domésticas, laborató
 - Armazenamento persistente via `sled`.
 
 ## Estrutura do Projeto
-src/ ├── main.rs                   # Ponto de entrada da aplicação ├── core/ │   ├── tracker.rs            # Contadores e lógica por IP │   ├── limiter.rs            # Aplicação de limites e bloqueios │   ├── time_window.rs        # Gerência de janelas de tempo (ex: 24h) │   └── mod.rs ├── net/ │   ├── sniffer.rs            # Captura pacotes da rede │   ├── analyzer.rs           # Analisa arquivos .pcap │   └── mod.rs ├── policy/ │   ├── loader.rs             # Carregamento de políticas via TOML/JSON │   └── mod.rs ├── persistence/ │   ├── db.rs                 # Armazenamento e persistência de dados │   └── mod.rs ├── system/ │   ├── executor.rs           # Execução segura de comandos do sistema (iptables/tc) │   └── mod.rs ├── ui/ │   ├── tui.rs                # Interface de terminal interativa (TUI) │   ├── cli.rs                # Interface por linha de comando (CLI) │   └── mod.rs ├── logging/ │   ├── logger.rs             # Registro de eventos, logs e tentativas │   └── mod.rs ├── config/ │   ├── config.rs             # Leitura e estrutura de configuração do sistema │   └── mod.rs └── utils/ └── mod.rs                # Funções auxiliares diversas (formatadores, validações, etc.)
+src/
+├── main.rs                  # Ponto de entrada da aplicação
+│
+├── core/
+│   ├── tracker.rs           # Contadores e estatísticas por IP
+│   ├── limiter.rs           # Aplicação de limites e bloqueios
+│   ├── time_window.rs       # Gerência de janelas de tempo (ex.: 24h)
+│   └── mod.rs
+│
+├── net/
+│   ├── sniffer.rs           # Captura de pacotes da rede
+│   ├── analyzer.rs          # Análise de arquivos .pcap
+│   └── mod.rs
+│
+├── policy/
+│   ├── loader.rs            # Carregamento de políticas (TOML/JSON)
+│   └── mod.rs
+│
+├── persistence/
+│   ├── db.rs                # Persistência e armazenamento de dados
+│   └── mod.rs
+│
+├── system/
+│   ├── executor.rs          # Execução segura de comandos do sistema (iptables/tc)
+│   └── mod.rs
+│
+├── ui/
+│   ├── tui.rs               # Interface de Terminal (TUI)
+│   ├── cli.rs               # Interface de Linha de Comando (CLI)
+│   └── mod.rs
+│
+├── logging/
+│   ├── logger.rs            # Registro de eventos e logs
+│   └── mod.rs
+│
+├── config/
+│   ├── config.rs            # Configuração da aplicação
+│   └── mod.rs
+│
+└── utils/
+    └── mod.rs               # Funções auxiliares (formatadores, validações, etc.)
 
 ## Dependências
 [dependencies]

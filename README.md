@@ -63,6 +63,7 @@ src/
 ```
 
 ## Dependências
+```text
 [dependencies]
 tokio = { version = "1", features = ["full"] }
 serde = { version = "1", features = ["derive"] }
@@ -77,6 +78,7 @@ log = "0.4"
 fern = "0.6"
 clap = { version = "4", features = ["derive"] }
 pcap-parser = "0.12"
+```
 
 ## Exemplo de Política em TOML
 [limiteporip]

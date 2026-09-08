@@ -1,49 +1,27 @@
-﻿#  Roadmap do Projeto ByteTally
+# Roadmap do ByteTally
 
-Este é o plano de desenvolvimento e expansão do ByteTally. O foco é evoluir gradualmente em **funcionalidade**, **desempenho** e **acessibilidade**, sempre com código limpo, modular e fácil de manter.
+## Implementado
 
-## ✅ Fase 1 — Mínimo Viável (MVP) [CONCLUÍDO/EM PROGRESSO]
+- [x] Biblioteca e CLI com módulos integrados na compilação.
+- [x] Leitura de registos de texto `IP BYTES`, com validação.
+- [x] Contabilização por IPv4/IPv6 e relatório por consumo.
+- [x] Protecção contra overflow dos contadores.
+- [x] Adaptador de execução real e dry-run, sem ligação à CLI.
+- [x] Testes unitários, testes da CLI e workflow de CI.
 
-- [x] Captura de pacotes por interface
-- [x] Contabilização de tráfego por IP
-- [x] Aplicação de cotas por IP
-- [x] Execução de bloqueios (`iptables`)
-- [x] Interface TUI com estatísticas
-- [x] Interface CLI com comandos úteis
-- [x] Sistema básico de log de eventos
-- [x] Suporte a arquivos `.pcap` para análise
-- [x] Estrutura modular separada por domínio
+## Próximos passos
 
-## 🔄 Fase 2 — Confiabilidade e Persistência
+- [ ] Análise de ficheiros PCAP.
+- [ ] Captura de pacotes por interface.
+- [ ] Políticas de cotas e janelas de tempo.
+- [ ] Persistência e recuperação de estado.
+- [ ] Integração controlada com iptables/tc e testes de aplicação de regras.
+- [ ] Interface TUI e modo daemon.
+- [ ] Configuração e logs estruturados.
 
-- [ ] Persistência robusta com `sled` (histórico, bloqueios, resets)
-- [ ] Recuperação automática de estado após reinício
-- [ ] Log rotativo de eventos
-- [ ] Mais testes unitários e integração contínua
-- [ ] Configuração dinâmica recarregável em tempo de execução
+## Futuro
 
-## 📡 Fase 3 — Extensões e Usabilidade
-
-- [ ] Exportação de relatórios (CSV/JSON)
-- [ ] Modo "headless" para daemon simples
-- [ ] Alertas por Telegram, Email ou Slack
-- [ ] Uso de `tc` para limitação (shaping) em vez de DROP
-- [ ] Suporte a políticas baseadas em MAC Address
-- [ ] CLI interativa com menus e autocomplete
-
-## 🌐 Fase 4 — Interface Web
-
-- [ ] Painel de controle web com dashboard
-- [ ] Login simples com autenticação local
-- [ ] Visualização em tempo real de uso de IPs
-- [ ] Configuração de políticas via Web UI
-
-## Fase 5 — Profissionalização
-
-- [ ] Suporte a múltiplas interfaces e VLANs
-- [ ] Integração com SNMP e syslog
-- [ ] Plugin para integração com pfSense/OpenWRT
-- [ ] Pacotes para Debian/Arch
-
-
-Este roadmap é vivo e pode ser adaptado conforme surgem novas ideias, colaborações e necessidades. Toda sugestão é bem-vinda!
+- [ ] Recarga de políticas, exportação e alertas.
+- [ ] Interface web/API opcional.
+- [ ] Suporte a MAC, VLAN e integração com routers.
+- [ ] Distribuição em pacotes Linux.
